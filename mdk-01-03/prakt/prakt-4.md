@@ -98,3 +98,16 @@ __Практическая работа №4__
 <div style="text-align:center">
     <img src="./images/prakt-4/image-4.png" width=90%>
 </div>
+
+<blockquote><b>Для дальнейше работы, перейтдите в директорию</b> <code>Gradle -> build.Gradle (Module: app)</code></blockquote>
+
+Добавьте в секцию buildFeatures параметр <code>viewBinding = true</code>
+
+```json
+    buildFeatures {
+        compose = true
+        viewBinding = true
+    }
+```
+
+Теперь вернеся в наш <code>main_activity.xml</code> и приведем его к следующему виду</code>

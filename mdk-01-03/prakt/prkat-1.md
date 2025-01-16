@@ -37,9 +37,11 @@ __Практическая работа №1__
 </div>
 
 P.S: Для любителей Linux, вот видео с официальной странице по установке на примере Bubuntu
-<video width="320" height="240" controls style="text-align: center;">
+
+<video width="100%" height="100%" controls style="text-align: center;">
   <source src="./data/studio-install-linux.mp4" type="video/mp4">
 </video>
+
 8. После установки, главное окно программы будет выглядеть примерно вот так:
 <div style="text-align: center">
     <img src="./images/prakt-1/image-9.png">
