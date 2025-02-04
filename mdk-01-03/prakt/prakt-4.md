@@ -111,3 +111,52 @@ __Практическая работа №4__
 ```
 
 Теперь вернеся в наш <code>main_activity.xml</code> и приведем его к следующему виду</code>
+```kotlin
+class MainActivity : AppCompatActivity() {
+
+    // Объявление переменной для связывания с представлением (View) через View Binding
+    private lateinit var binding: ActivityMainBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        // Создаем экземпляр binding на основе layout файла activity_main.xml
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        // Включение режима edge-to-edge (по краям) для полной растяжки контента
+        enableEdgeToEdge()
+        //setContentView(R.layout.activity_main)
+        // Установка главного контента нашего Activity через корневую часть binding
+        setContentView(binding.root) // Заменено
+
+        // Устанавливаем обработчик клика для кнопки добавления заметки
+        binding.addButton.setOnClickListener {
+            // При нажатии на кнопку, создаем новый интент для перехода на AddNoteActivity
+            val intent = Intent(this, AddNoteActivity::class.java)
+            // Запускаем новое Activity
+            startActivity(intent)
+        }
+    }
+}
+```
+
+Теперь давайте создадим <code>data-class</code> для нашей заметки.
+<blockquote>Если коротко сказать, то как правило, такие классы предназначены для хранения некоторого состояния, некоторых данных и когда не требуется какое-то поведение в виде функций.</blockquote>
+
+Для создания data класса нажмите ПКМ по вашему основному пакету в проекте, <code>New -> Kotlin Class / File</code>
+
+<div style="text-align:center">
+    <img src="./images/prakt-4/image-5.png" width=90%>
+</div>
+
+Выберите <code>DataClass</code> и назовите его <code>Note</code>
+<div style="text-align:center">
+    <img src="./images/prakt-4/image-6.png" width=90%>
+</div>
+Заполним наш <code>data class</code> следующими атрибутами:
+
+```kotlin
+data class Note(val id: Int, val title: String, val content: String)
+```
+
+<div style="text-align:center">
+    <img src="./images/prakt-4/image-7.png" width=90%>
+</div>
