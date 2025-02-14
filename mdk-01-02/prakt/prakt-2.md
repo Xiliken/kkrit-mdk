@@ -8,7 +8,6 @@
 3. Импортируем необходимые нам для работы модули
 ```python
 import customtkinter as ctk
-from PIL import Image
 import os
 ```
 4. Объявим основные настройки для нашего приложения, а также константу, которая будет отвечать за наш файл с заметками.
@@ -83,7 +82,7 @@ if __name__ == "__main__":
 ```
 
 В результате вы должны получить примерно следующее:
-![[mdk-01-02/prakt/images/prakt-2/image-1.png]]
+<img src="./images/prakt-2/image-1.png">
 
 Добавим первый элемент на наше приложение. Пусть это будет заголовок, расположенный в верхнем левом углу экрана с некоторыми отступами.
 
@@ -130,7 +129,7 @@ self.title_label.pack(side=ctk.LEFT, anchor="nw", padx=10)
 - pady: устанавливает отступ виджета от границ контейнера по вертикали.
 
 Запустим наше приложение.
-![[mdk-01-02/prakt/images/prakt-2/image-2.png]]
+<img src="./images/prakt-2/image-2.png">
 
 Как видим, наша надпись добавилась. Но просто надпись - это не интересно. Давайте добавим перед текстом изображение.
 
@@ -313,7 +312,7 @@ def open_note_popup(self, mode: str = "add", note_index: int | None = None) -> N
 ```
 В результате получится следующее
 <p align="center">
-<img src="/mdk-01-02/prakt/images/prakt-2/image-7.png">
+<img src="./images/prakt-2/image-7.png">
 </p>
 
 Немного пройдемся по коду:
@@ -386,7 +385,7 @@ save_btn.pack(side=ctk.TOP, fill=ctk.X, ipady=15, pady=20, padx=30)
 Как мы видим, у нас должен появиться новый метод: `save_action`
 Просто задайте данный метод, но пока без реализации. Сделайте это **самостоятельно**
 <p align="center">
-<img src="/mdk-01-02/prakt/images/prakt-2/image-8.png">
+<img src="./images/prakt-2/image-8.png">
 </p>
 
 
@@ -674,7 +673,7 @@ save_btn.pack(side=ctk.TOP, fill=ctk.X, ipady=15, pady=20, padx=30)
 	<img src="./images/prakt-2/image-13.png">
 </p>
 
-Реализуйте метод delete_note()
+Реализуйте метод delete_note() **самостоятельно**.
 
 # Задание на самостоятельное выполнение
 
